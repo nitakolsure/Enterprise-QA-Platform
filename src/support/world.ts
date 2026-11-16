@@ -13,6 +13,7 @@ export class CustomWorld extends World {
   loginPage!: LoginPage;
   productPage!: ProductPage;
   cartPage!: CartPage;
+  cartConfirmationMessage?: string;
 
   constructor(options: IWorldOptions) {
     super(options);

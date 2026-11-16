@@ -16,6 +16,11 @@ export class HomePage extends BasePage {
     await this.page.locator('#tbodyid .card-title a').first().waitFor();
   }
 
+  async selectCategory(category: string): Promise<void> {
+    await this.page.getByRole('link', { name: category, exact: true }).click();
+    await this.page.locator('#tbodyid .card-title a').first().waitFor();
+  }
+
   async openProduct(productName: string): Promise<void> {
     await this.page.getByRole('link', { name: productName, exact: true }).click();
   }
