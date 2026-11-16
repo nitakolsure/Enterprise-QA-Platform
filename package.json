@@ -1,0 +1,23 @@
+{
+  "name": "demoblaze-playwright-bdd",
+  "version": "1.0.0",
+  "description": "TypeScript Playwright Test + Cucumber BDD framework for Demoblaze",
+  "private": true,
+  "scripts": {
+    "cucumber": "node --import tsx ./node_modules/@cucumber/cucumber/bin/cucumber.js --config cucumber.cjs",
+    "test": "npm run cucumber --",
+    "test:tag": "node run-by-tag.js",
+    "test:smoke": "npm run cucumber -- --tags @smoke",
+    "test:cart": "npm run cucumber -- --tags @cart",
+    "test:addToCart": "npm run cucumber -- --tags @addToCart"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "playwright-bdd": "^9.2.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
